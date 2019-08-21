@@ -55,10 +55,12 @@ class NewBookViewController: UITableViewController {
         if let topItem = navigationController?.navigationBar.topItem{
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: PdfManager.generatePDF(from: currentBook!), action: nil)
         
         navigationItem.leftBarButtonItem = nil
-        saveButton.isEnabled = true
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.clear
+        
+       // performSegue(withIdentifier: "Identifier", sender: nil)
+        
         title = currentBook?.name
         bookName.isUserInteractionEnabled = false
         bookAuthor.isUserInteractionEnabled = false
