@@ -123,6 +123,7 @@
                                     <outlet property="authorLabel" destination="DOA-fX-GAc" id="4dY-eL-XvA"/>
                                     <outlet property="nameLabel" destination="uMz-dF-uCq" id="pVf-Yx-SIQ"/>
                                     <outlet property="priceLabel" destination="Rlo-Nd-Xzf" id="M0q-sp-fxy"/>
+                                    <segue destination="Arp-dr-ksB" kind="show" identifier="showDetail" id="kLu-Sn-aSw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -131,7 +132,7 @@
                             <outlet property="delegate" destination="Kwy-qo-Pea" id="rqz-V5-7Ho"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Books" id="Wrz-Uc-DRU">
+                    <navigationItem key="navigationItem" title="Books" largeTitleDisplayMode="never" id="Wrz-Uc-DRU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Buf-Jx-Roy">
                             <connections>
                                 <segue destination="DtJ-Np-PuM" kind="unwind" unwindAction="cancelAction:" id="iTJ-ss-2fP"/>
@@ -272,7 +273,7 @@
                             <outlet property="delegate" destination="Arp-dr-ksB" id="mes-DB-TBd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Book" id="Y18-6T-qck">
+                    <navigationItem key="navigationItem" title="New Book" largeTitleDisplayMode="always" id="Y18-6T-qck">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hK4-kA-yFx">
                             <connections>
                                 <action selector="cancelAction:" destination="Arp-dr-ksB" id="FtD-Il-lEj"/>
@@ -300,8 +301,8 @@
         <scene sceneID="Thf-ha-FuX">
             <objects>
                 <navigationController id="Tt4-sh-Vd9" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B3Y-HM-afY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="B3Y-HM-afY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
@@ -340,4 +341,7 @@
     <resources>
         <image name="LaunchScreenImg" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kLu-Sn-aSw"/>
+    </inferredMetricsTieBreakers>
 </document>

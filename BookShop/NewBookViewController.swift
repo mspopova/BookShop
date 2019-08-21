@@ -10,6 +10,7 @@ import UIKit
 
 class NewBookViewController: UITableViewController {
     
+    var currentBook: Book?
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
@@ -24,10 +25,9 @@ class NewBookViewController: UITableViewController {
         
         saveButton.isEnabled = false
         bookName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-        
         bookPrice.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         bookAuthor.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-
+        setupEditScreen()
     }
     
     //TODO: другой способ с обзерверами для скрытия клавиатуры при тапе вне клавиатуры
@@ -35,12 +35,39 @@ class NewBookViewController: UITableViewController {
         view.endEditing(true)
     }
     
-    func saveNewBook(){
-       // newBook = Book(name: bookName.text, author: bookAuthor.text, price: bookPrice.text)
-    }
     
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true)
+    }
+    
+    private func setupEditScreen(){
+        if currentBook !== nil {
+            
+            setupNavigationBar()
+        
+            bookName.text = currentBook?.name
+            bookAuthor.text = currentBook?.author
+            bookPrice.text = "\(currentBook?.price ?? 0)₽"
+        }
+    }
+    
+    private func setupNavigationBar(){
+        if let topItem = navigationController?.navigationBar.topItem{
+            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
+        
+        navigationItem.leftBarButtonItem = nil
+        saveButton.isEnabled = true
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.clear
+        title = currentBook?.name
+        bookName.isUserInteractionEnabled = false
+        bookAuthor.isUserInteractionEnabled = false
+        bookPrice.isUserInteractionEnabled = false
+        
+    }
+    func saveBook(){
+        let newBook = Book(name: bookName.text!, author: bookAuthor.text!, price: Int(bookPrice.text!) ?? 0)
+            StorageManager.saveObject(newBook)
     }
     
 }

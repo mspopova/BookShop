@@ -22,10 +22,11 @@ class ViewController: UIViewController {
         self.sellButton.layer.cornerRadius = 15
         self.buyButton.layer.cornerRadius = 15
         
-        //loading books from plist
-        DispatchQueue.main.async {
-            self.newBook.getBooks()
-        }
+// UNCOMMENT TO LOAD DATA FROM PLIST
+//        //loading books from plist
+//        DispatchQueue.main.async {
+//            self.newBook.getBooks()
+//        }
         
         // Do any additional setup after loading the view.
     }
@@ -34,7 +35,8 @@ class ViewController: UIViewController {
         
     }
     @IBAction func unwindSegue (_ segue: UIStoryboardSegue){
-       // guard let newBookVC = segue.source as? 
+        guard let newBookVC = segue.source as? NewBookViewController else {return}
+        newBookVC.saveBook()
     }
 
 
