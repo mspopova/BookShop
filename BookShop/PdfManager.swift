@@ -19,9 +19,8 @@ class PdfManager{
         pdf.addText("Name: \(book.name), \nAuthor: \(book.author), \nPrice: \(book.price)")
         pdf.addLineSpace(20)
         pdf.addText("Download books.ru app to find more books!")
-        pdf.addImage(UIImage(named: "LaunchScreenImg")!)
-//        pdf.addLineSpace(20)
-//        pdf.addLineSeparator()
+        pdf.addLineSpace(20)
+        pdf.addImage(UIImage(named: "logo")!)
         
         let fileManager = FileManager.default
         do {
