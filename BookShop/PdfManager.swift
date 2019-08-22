@@ -9,43 +9,31 @@ import SimplePDF
 import Foundation
 
 class PdfManager{
-    static func check(){
-        print("im here")
-    }
+    
+    static var path: URL = Bundle.main.url(forResource: "file", withExtension: "pdf")!
     static func generatePDF(from book: Book){
         let A4paperSize = CGSize(width: 595, height: 842)
         let pdf = SimplePDF(pageSize: A4paperSize, pageMargin: 20.0)
-        
-        pdf.addText( "Sharing book from Books.ru" )
-        
+        pdf.addText( "Sharing a book from Books.ru" )
+        pdf.addLineSpace(20)
+        pdf.addText("Name: \(book.name), \nAuthor: \(book.author), \nPrice: \(book.price)")
+        pdf.addLineSpace(20)
+        pdf.addText("Download books.ru app to find more books!")
         pdf.addImage(UIImage(named: "LaunchScreenImg")!)
-      //  pdf.addAttributedText( NSAttributedString )
-        pdf.addLineSeparator(height: 30)
-        pdf.addText("Название\(book.name)")
+//        pdf.addLineSpace(20)
+//        pdf.addLineSeparator()
         
-        // or pdf.addLineSeparator() default height is 1.0
-        //pdf.addLineSpace(20)
-        
-        
-        //let pdfData = pdf.generatePDFdata()
-       // try? pdfData.write(to: path, options: .atomicWrite)
-        if let documentDirectories = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
-            
-            let fileName = "example.pdf"
-            let documentsFileName = documentDirectories + "/" + fileName
-            guard let path = Bundle.main.url(forResource: "file", withExtension: "pdf")
-            else {
-                print ("bad path")
-                return
-            }
+        let fileManager = FileManager.default
+        do {
+            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
+            let fileURL = documentDirectory.appendingPathComponent("file.pdf")
+            self.path = fileURL
             let pdfData = pdf.generatePDFdata()
-            do{
-                try pdfData.write(to: path, options: .atomic)
-                print("\nThe generated pdf can be found at:")
-                print("\n\t\(path)\n")
-            }catch{
-                print(error)
-            }
+            try pdfData.write(to: fileURL, options: .atomic)
+            print("\nThe generated pdf can be found at:")
+            print("\n\t\(fileURL)\n")
+        }catch {
+            print(error)
         }
         
     }

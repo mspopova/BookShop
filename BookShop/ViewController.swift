@@ -28,7 +28,6 @@ class ViewController: UIViewController {
 //            self.newBook.getBooks()
 //        }
         
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func cancelAction (_ segue: UIStoryboardSegue){

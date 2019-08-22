@@ -30,7 +30,6 @@ class NewBookViewController: UITableViewController {
         setupEditScreen()
     }
     
-    //TODO: другой способ с обзерверами для скрытия клавиатуры при тапе вне клавиатуры
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         view.endEditing(true)
     }
@@ -55,11 +54,9 @@ class NewBookViewController: UITableViewController {
         if let topItem = navigationController?.navigationBar.topItem{
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: PdfManager.generatePDF(from: currentBook!), action: nil)
-        
         navigationItem.leftBarButtonItem = nil
         
-       // performSegue(withIdentifier: "Identifier", sender: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(ShareButtonTapped))
         
         title = currentBook?.name
         bookName.isUserInteractionEnabled = false
@@ -71,7 +68,10 @@ class NewBookViewController: UITableViewController {
         let newBook = Book(name: bookName.text!, author: bookAuthor.text!, price: Int(bookPrice.text!) ?? 0)
             StorageManager.saveObject(newBook)
     }
-    
+    @objc private func ShareButtonTapped(){
+        PdfManager.generatePDF(from: currentBook!)
+        performSegue(withIdentifier: "showPDF", sender: nil)
+    }
 }
 
 extension NewBookViewController: UITextFieldDelegate{
