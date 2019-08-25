@@ -30,9 +30,10 @@ class PlistManager {
         for book in classData {
             if let name = book["name"],
                 let author = book["author"],
-                let price = book["price"]
+                let price = book["price"],
+                let cover = book["cover"]
             {
-                let book = Book(name: name, author: author, price: Int(price)!)
+                let book = Book(name: name, author: author, price: Int(price)!,imageData: nil)
                 books.append(book)
                 
             }

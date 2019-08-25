@@ -12,12 +12,14 @@ class Book: Object, Codable {
     @objc dynamic var name = ""
     @objc dynamic var author = ""
     @objc dynamic var price = 0
+    @objc dynamic var imageData: Data?
     
-    convenience init(name: String, author: String, price: Int){
+    convenience init(name: String, author: String, price: Int, imageData: Data?){
         self.init()
         self.name = name
         self.author = author
         self.price = price
+        self.imageData = imageData
     }
     
     func getBooks(){

@@ -33,6 +33,13 @@ class TableViewController: UITableViewController {
         cell.nameLabel.text = book.name
         cell.authorLabel.text = book.author
         cell.priceLabel.text = "\(book.price)₽"
+        
+        let image = #imageLiteral(resourceName: "LaunchScreenImg")
+        let data = image.pngData()
+        cell.imageOfBook.image = UIImage(data: book.imageData ?? data!)
+        cell.imageOfBook.layer.cornerRadius = cell.imageOfBook.frame.size.height / 2
+        cell.imageOfBook.clipsToBounds = true
+        
         return cell
     }
     
