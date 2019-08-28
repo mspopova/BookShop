@@ -6,6 +6,7 @@ target 'BookShop' do
   use_frameworks!
   pod 'RealmSwift'
   pod 'SimplePDF'
+  pod 'MBProgressHUD'
   # Pods for BookShop
 
 end

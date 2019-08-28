@@ -32,7 +32,8 @@ class PlistManager {
                 let author = book["author"],
                 let price = book["price"]
             {
-                let book = Book(name: name, author: author, price: Int(price)!)
+                
+                let book = Book(name: name, author: author, price: Int(price)!,imageData: nil)
                 books.append(book)
                 
             }
@@ -41,3 +42,4 @@ class PlistManager {
         return books
     }
 }
+
