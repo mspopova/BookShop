@@ -24,7 +24,6 @@ class Book: Object, Codable {
     
     func getBooks(){
         let books = PlistManager.getPlist(withName: "Books")
-        
         for book in books{
             StorageManager.saveObject(book)
         }

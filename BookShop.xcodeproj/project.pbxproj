@@ -15,7 +15,6 @@
 		B5039F6A230C65C40039C994 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5039F69230C65C40039C994 /* PlistManager.swift */; };
 		B571E693230D5E4100F4D4EC /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571E692230D5E4100F4D4EC /* NewBookViewController.swift */; };
 		B571E695230D796800F4D4EC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571E694230D796800F4D4EC /* StorageManager.swift */; };
-		B5840E042313342300E40B6C /* bulgakov_book.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5840E032313342300E40B6C /* bulgakov_book.jpg */; };
 		B599F88B230D97AF005CEB40 /* PdfManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B599F88A230D97AF005CEB40 /* PdfManager.swift */; };
 		B59A5457230C34590088EB56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A5456230C34590088EB56 /* AppDelegate.swift */; };
 		B59A5459230C34590088EB56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A5458230C34590088EB56 /* ViewController.swift */; };
@@ -36,7 +35,6 @@
 		B5039F69230C65C40039C994 /* PlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
 		B571E692230D5E4100F4D4EC /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
 		B571E694230D796800F4D4EC /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		B5840E032313342300E40B6C /* bulgakov_book.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bulgakov_book.jpg; path = BookShop/bulgakov_book.jpg; sourceTree = SOURCE_ROOT; };
 		B599F88A230D97AF005CEB40 /* PdfManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfManager.swift; sourceTree = "<group>"; };
 		B59A5453230C34590088EB56 /* BookShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59A5456230C34590088EB56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,19 +93,18 @@
 				B59A5456230C34590088EB56 /* AppDelegate.swift */,
 				B5039F65230C3C3C0039C994 /* Books.plist */,
 				B5039F67230C48330039C994 /* Book.swift */,
-				B5840E032313342300E40B6C /* bulgakov_book.jpg */,
+				B5EC180C230D453D002D803E /* CustomTableViewCell.swift */,
 				B571E694230D796800F4D4EC /* StorageManager.swift */,
 				B599F88A230D97AF005CEB40 /* PdfManager.swift */,
+				B501BFB2230E7FC900C84202 /* PDFViewController.swift */,
+				B5039F69230C65C40039C994 /* PlistManager.swift */,
 				B501BFB4230E8B3D00C84202 /* file.pdf */,
 				B59A5468230C370C0088EB56 /* TableViewController.swift */,
-				B5039F69230C65C40039C994 /* PlistManager.swift */,
 				B59A5458230C34590088EB56 /* ViewController.swift */,
-				B59A545A230C34590088EB56 /* Main.storyboard */,
-				B501BFB2230E7FC900C84202 /* PDFViewController.swift */,
 				B571E692230D5E4100F4D4EC /* NewBookViewController.swift */,
-				B5EC180C230D453D002D803E /* CustomTableViewCell.swift */,
-				B59A545D230C345A0088EB56 /* Assets.xcassets */,
+				B59A545A230C34590088EB56 /* Main.storyboard */,
 				B59A545F230C345A0088EB56 /* LaunchScreen.storyboard */,
+				B59A545D230C345A0088EB56 /* Assets.xcassets */,
 				B59A5462230C345A0088EB56 /* Info.plist */,
 			);
 			path = BookShop;
@@ -184,7 +181,6 @@
 				B59A5461230C345A0088EB56 /* LaunchScreen.storyboard in Resources */,
 				B59A545E230C345A0088EB56 /* Assets.xcassets in Resources */,
 				B59A545C230C34590088EB56 /* Main.storyboard in Resources */,
-				B5840E042313342300E40B6C /* bulgakov_book.jpg in Resources */,
 				B5039F66230C3C3C0039C994 /* Books.plist in Resources */,
 				B501BFB5230E8B3E00C84202 /* file.pdf in Resources */,
 			);
@@ -224,6 +220,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BookShop/Pods-BookShop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SimplePDF/SimplePDF.framework",
@@ -232,6 +229,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimplePDF.framework",

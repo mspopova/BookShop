@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="48"/>
                                         <color key="backgroundColor" red="0.99840003249999998" green="0.92040389779999998" blue="0.71881097559999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="32"/>
-                                        <state key="normal" title="Buy">
+                                        <state key="normal" title="Купить">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -40,7 +40,7 @@
                                         <rect key="frame" x="0.0" y="70" width="175" height="48"/>
                                         <color key="backgroundColor" red="0.99840003252029419" green="0.92040389776229858" blue="0.71881097555160522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="32"/>
-                                        <state key="normal" title="Sell">
+                                        <state key="normal" title="Продать">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="97.601199400299862"/>
         </scene>
-        <!--Books-->
+        <!--Книги-->
         <scene sceneID="zgU-LC-XkE">
             <objects>
                 <tableViewController id="Kwy-qo-Pea" customClass="TableViewController" customModule="BookShop" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,7 +145,7 @@
                             <outlet property="delegate" destination="Kwy-qo-Pea" id="rqz-V5-7Ho"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Books" largeTitleDisplayMode="never" id="Wrz-Uc-DRU">
+                    <navigationItem key="navigationItem" title="Книги" largeTitleDisplayMode="never" id="Wrz-Uc-DRU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Buf-Jx-Roy">
                             <connections>
                                 <segue destination="DtJ-Np-PuM" kind="unwind" unwindAction="cancelAction:" id="iTJ-ss-2fP"/>
@@ -177,7 +177,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="yan-ab-cIn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.50000000000006"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                             </subviews>
@@ -311,7 +311,7 @@
             </objects>
             <point key="canvasLocation" x="3054" y="98"/>
         </scene>
-        <!--New Book-->
+        <!--Продать книгу-->
         <scene sceneID="jQL-lA-n1P">
             <objects>
                 <tableViewController id="Arp-dr-ksB" customClass="NewBookViewController" customModule="BookShop" customModuleProvider="target" sceneMemberID="viewController">
@@ -331,8 +331,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="c8x-dx-0ba">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.50000000000006"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -353,13 +353,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ioY-lr-FUL">
                                                     <rect key="frame" x="16" y="8" width="343" height="62.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57e-vl-6zL">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57e-vl-6zL">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
                                                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20V-EA-XUu">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Введите название" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20V-EA-XUu">
                                                             <rect key="frame" x="0.0" y="36" width="343" height="26.5"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -389,17 +389,17 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vWp-MS-W7l">
                                                     <rect key="frame" x="16" y="8" width="343" height="62.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43F-N8-5FD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43F-N8-5FD">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
                                                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cg2-5W-dO4">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Введите автора" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cg2-5W-dO4">
                                                             <rect key="frame" x="0.0" y="36" width="343" height="26.5"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="Arp-dr-ksB" id="NIG-5E-om8"/>
                                                             </connections>
@@ -425,13 +425,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4RE-Iv-I26">
                                                     <rect key="frame" x="16" y="8" width="343" height="62.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTo-sI-1MY">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоимость" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTo-sI-1MY">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
                                                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JI4-e6-fuK">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Введите стоимость" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JI4-e6-fuK">
                                                             <rect key="frame" x="0.0" y="36" width="343" height="26.5"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -459,7 +459,7 @@
                             <outlet property="delegate" destination="Arp-dr-ksB" id="mes-DB-TBd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Book" largeTitleDisplayMode="always" id="Y18-6T-qck">
+                    <navigationItem key="navigationItem" title="Продать книгу" largeTitleDisplayMode="always" id="Y18-6T-qck">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hK4-kA-yFx">
                             <connections>
                                 <action selector="cancelAction:" destination="Arp-dr-ksB" id="FtD-Il-lEj"/>
@@ -467,20 +467,20 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="3oz-S9-ECb">
                             <connections>
-                                <segue destination="Khs-xD-ZvM" kind="unwind" unwindAction="unwindSegue:" id="wkJ-Wm-aV2"/>
+                                <action selector="saveBook:" destination="Arp-dr-ksB" id="Y8p-7D-PkW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bookAuthor" destination="20V-EA-XUu" id="UAw-zY-2zY"/>
+                        <outlet property="bookAuthor" destination="cg2-5W-dO4" id="ZSZ-db-1k0"/>
                         <outlet property="bookImage" destination="c8x-dx-0ba" id="aLM-lj-FpL"/>
-                        <outlet property="bookPrice" destination="cg2-5W-dO4" id="EAF-nq-NBn"/>
+                        <outlet property="bookName" destination="20V-EA-XUu" id="Lba-tP-0Le"/>
+                        <outlet property="bookPrice" destination="JI4-e6-fuK" id="1tf-iK-gnv"/>
                         <outlet property="saveButton" destination="3oz-S9-ECb" id="c2C-xf-RnX"/>
                         <segue destination="E8X-Cs-PGf" kind="show" identifier="showPDF" id="VxI-oL-QAP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSZ-qx-bdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Khs-xD-ZvM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1580" y="866.71664167916049"/>
         </scene>
@@ -535,6 +535,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O7S-oP-yX2" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VFt-0h-WYq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -543,6 +544,9 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bft-NZ-fCJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Arp-dr-ksB" kind="relationship" relationship="rootViewController" id="mQy-0W-CT0"/>
                     </connections>
@@ -575,6 +579,6 @@
         <image name="Photo" width="195" height="196"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kLu-Sn-aSw"/>
+        <segue reference="mQy-0W-CT0"/>
     </inferredMetricsTieBreakers>
 </document>

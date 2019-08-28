@@ -1,4 +1,5 @@
 PODS:
+  - MBProgressHUD (1.1.0)
   - Realm (3.11.1):
     - Realm/Headers (= 3.11.1)
   - Realm/Headers (3.11.1)
@@ -7,20 +8,23 @@ PODS:
   - SimplePDF (3.0.0)
 
 DEPENDENCIES:
+  - MBProgressHUD
   - RealmSwift
   - SimplePDF
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - MBProgressHUD
     - Realm
     - RealmSwift
     - SimplePDF
 
 SPEC CHECKSUMS:
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   SimplePDF: 903143ede36965886997a5c1bc6b8940b082ba20
 
-PODFILE CHECKSUM: ba5948f88c587fd810634dc2b55dc70bfcb0ef7f
+PODFILE CHECKSUM: 704d629ba051e65fb4cae1342941ad9da81756d2
 
 COCOAPODS: 1.5.3

@@ -3,18 +3,14 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>cover</key>
-		<string>BookShop/bulgakov_book.jpg</string>
 		<key>price</key>
 		<string>1000</string>
 		<key>author</key>
-		<string>Булгаков </string>
+		<string>Булгаков М. А.</string>
 		<key>name</key>
-		<string>Мастер и маргарита</string>
+		<string>Мастер и Маргарита</string>
 	</dict>
 	<dict>
-		<key>cover</key>
-		<string>none</string>
 		<key>price</key>
 		<string>1500</string>
 		<key>author</key>
@@ -23,8 +19,6 @@
 		<string>Преступление и наказание</string>
 	</dict>
 	<dict>
-		<key>cover</key>
-		<string>none</string>
 		<key>price</key>
 		<string>2000</string>
 		<key>author</key>
@@ -33,8 +27,6 @@
 		<string>Евгений Онегин</string>
 	</dict>
 	<dict>
-		<key>cover</key>
-		<string>none</string>
 		<key>price</key>
 		<string>1000</string>
 		<key>author</key>
@@ -43,8 +35,6 @@
 		<string>Демон</string>
 	</dict>
 	<dict>
-		<key>cover</key>
-		<string>none</string>
 		<key>price</key>
 		<string>1200</string>
 		<key>author</key>

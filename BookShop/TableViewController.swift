@@ -16,12 +16,9 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         books = realm.objects(Book.self)
-        
-
     }
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.isEmpty ? 0: books.count
     }
@@ -33,13 +30,11 @@ class TableViewController: UITableViewController {
         cell.nameLabel.text = book.name
         cell.authorLabel.text = book.author
         cell.priceLabel.text = "\(book.price)₽"
-        
-        let image = #imageLiteral(resourceName: "LaunchScreenImg")
-        let data = image.pngData()
-        cell.imageOfBook.image = UIImage(data: book.imageData ?? data!)
-        cell.imageOfBook.layer.cornerRadius = cell.imageOfBook.frame.size.height / 2
-        cell.imageOfBook.clipsToBounds = true
-        
+        if book.imageData == nil {
+            cell.imageOfBook.image = #imageLiteral(resourceName: "LaunchScreenImg")
+        } else {
+            cell.imageOfBook.image = UIImage(data: book.imageData!)
+        }
         return cell
     }
     
