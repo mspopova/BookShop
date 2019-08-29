@@ -52,7 +52,7 @@ class NewBookViewController: UITableViewController, UITextViewDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        if indexPath.row == 0 && currentBook == nil {
             let cameraIcon = #imageLiteral(resourceName: "camera")
             let photoIcon = #imageLiteral(resourceName: "photo")
             let actionSheet = UIAlertController(title: nil,
@@ -207,20 +207,22 @@ extension NewBookViewController: UITextFieldDelegate{
 extension NewBookViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func chooseImagePicker(source: UIImagePickerController.SourceType){
+    
         if UIImagePickerController.isSourceTypeAvailable(source){
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.allowsEditing = true
             imagePicker.sourceType = source
             present(imagePicker, animated: true)
-        }    }
+            }    }
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+      
         bookImage.image = info[.editedImage] as? UIImage
         bookImage.contentMode = .scaleAspectFill
         dismiss(animated: true)
         
-    }
+        }
 }
 
