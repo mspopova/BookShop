@@ -11,7 +11,7 @@ import Foundation
 class PlistManager {
     static func getPlist(withName name: String) -> [Book]{
         var books = [Book]()
-        //print("Start reading plist file")
+        print("Start reading plist file")
         guard let classURL = Bundle.main.url(forResource: name, withExtension:"plist") else {
             print("Error: Unable to form path")
             return books
@@ -30,10 +30,12 @@ class PlistManager {
         for book in classData {
             if let name = book["name"],
                 let author = book["author"],
-                let price = book["price"]
+                let price = book["price"],
+                let bookDescription = book["bookDescription"]
+                
             {
                 
-                let book = Book(name: name, author: author, price: Int(price)!,imageData: nil)
+                let book = Book(name: name, author: author, price: Int(price)!,imageData: nil, bookDescription: bookDescription)
                 books.append(book)
                 
             }

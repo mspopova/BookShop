@@ -179,7 +179,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="c8x-dx-0ba">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -298,6 +298,42 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="250" id="PFM-SG-PhL">
+                                        <rect key="frame" x="0.0" y="475" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PFM-SG-PhL" id="ymV-8G-cB7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4ft-zU-tkT">
+                                                    <rect key="frame" x="16" y="19" width="343" height="212"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJ2-09-KgK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                            <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P9t-3x-gPt">
+                                                            <rect key="frame" x="0.0" y="30.5" width="343" height="181.5"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="Arp-dr-ksB" id="E8M-J3-A1l"/>
+                                                            </connections>
+                                                        </textView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4ft-zU-tkT" firstAttribute="leading" secondItem="ymV-8G-cB7" secondAttribute="leadingMargin" id="Xpg-eX-c60"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4ft-zU-tkT" secondAttribute="bottom" constant="8" id="as3-jy-wOF"/>
+                                                <constraint firstItem="4ft-zU-tkT" firstAttribute="top" secondItem="ymV-8G-cB7" secondAttribute="topMargin" constant="8" id="c3n-cd-AOk"/>
+                                                <constraint firstItem="4ft-zU-tkT" firstAttribute="trailing" secondItem="ymV-8G-cB7" secondAttribute="trailingMargin" id="fLW-od-s42"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -320,6 +356,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bookAuthor" destination="cg2-5W-dO4" id="ZSZ-db-1k0"/>
+                        <outlet property="bookDescription" destination="P9t-3x-gPt" id="HWh-n3-Q6K"/>
                         <outlet property="bookImage" destination="c8x-dx-0ba" id="aLM-lj-FpL"/>
                         <outlet property="bookName" destination="20V-EA-XUu" id="Lba-tP-0Le"/>
                         <outlet property="bookPrice" destination="JI4-e6-fuK" id="1tf-iK-gnv"/>

@@ -9,15 +9,13 @@
 import UIKit
 import MBProgressHUD
 
-class NewBookViewController: UITableViewController {
+class NewBookViewController: UITableViewController, UITextViewDelegate {
     
     var currentBook: Book?
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    
-    
     @IBOutlet weak var bookName: UITextField!
-
+    @IBOutlet weak var bookDescription: UITextView!
     @IBOutlet weak var bookPrice: UITextField!
     @IBOutlet weak var bookAuthor: UITextField!
     @IBOutlet weak var bookImage: UIImageView!
@@ -29,12 +27,28 @@ class NewBookViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        bookDescription.delegate = self
+        bookDescription.text = "Введите описание книги"
+        bookDescription.textColor = UIColor.lightGray
         
         saveButton.isEnabled = false
         bookName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         bookPrice.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         bookAuthor.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupPreviewScreen()
+    }
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Введите описание книги"
+            textView.textColor = UIColor.lightGray
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -87,12 +101,15 @@ class NewBookViewController: UITableViewController {
             else{
                 guard let data = currentBook?.imageData, let image = UIImage(data: data) else {return}
                 bookImage.image = image
-                bookImage.contentMode = .scaleAspectFill
+                bookImage.contentMode = .scaleAspectFit
+                bookImage.backgroundColor = UIColor.white
             }
             
             bookName.text = currentBook?.name
             bookAuthor.text = currentBook?.author
             bookPrice.text = "\(currentBook?.price ?? 0)₽"
+            bookDescription.textColor = UIColor.black
+            bookDescription.text = currentBook?.bookDescription
         }
     }
     
@@ -119,6 +136,7 @@ class NewBookViewController: UITableViewController {
         bookName.isUserInteractionEnabled = false
         bookAuthor.isUserInteractionEnabled = false
         bookPrice.isUserInteractionEnabled = false
+        bookDescription.isEditable = false
         
     }
     func saveBook(){
@@ -134,7 +152,9 @@ class NewBookViewController: UITableViewController {
             let newBook = Book(name: self.bookName.text!,
                                author: self.bookAuthor.text!,
                                price: Int(self.bookPrice.text!) ?? 0,
-                           imageData: imageData)
+                               imageData: imageData,
+                               bookDescription: self.bookDescription.text
+                           )
             StorageManager.saveObject(newBook)
             MBProgressHUD.hide(for: self.view, animated: true)
             self.dismiss(animated: true)
