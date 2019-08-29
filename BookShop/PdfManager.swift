@@ -14,11 +14,11 @@ class PdfManager{
     static func generatePDF(from book: Book){
         let A4paperSize = CGSize(width: 595, height: 842)
         let pdf = SimplePDF(pageSize: A4paperSize, pageMargin: 20.0)
-        pdf.addText( "Sharing a book from Books.ru" )
+        pdf.addText( "Делюсь книгой из приложения Books.ru" )
         pdf.addLineSpace(20)
-        pdf.addText("Name: \(book.name), \nAuthor: \(book.author), \nPrice: \(book.price)")
+        pdf.addText("Название: \(book.name), \nАвтор: \(book.author), \nСтоимость: \(book.price)")
         pdf.addLineSpace(20)
-        pdf.addText("Download books.ru app to find more books!")
+        pdf.addText("Скачивай приожение, чтобы увидеть еще больше книг!")
         pdf.addLineSpace(20)
         pdf.addImage(UIImage(named: "logo")!)
         

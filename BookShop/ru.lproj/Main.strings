@@ -1,0 +1,45 @@
+
+/* Class = "UIBarButtonItem"; title = "Send"; ObjectID = "1xC-oC-GP0"; */
+"1xC-oC-GP0.title" = "Send";
+
+/* Class = "UITextField"; placeholder = "Введите название"; ObjectID = "20V-EA-XUu"; */
+"20V-EA-XUu.placeholder" = "Введите название";
+
+/* Class = "UIBarButtonItem"; title = "Продать"; ObjectID = "3oz-S9-ECb"; */
+"3oz-S9-ECb.title" = "Продать";
+
+/* Class = "UILabel"; text = "Автор"; ObjectID = "43F-N8-5FD"; */
+"43F-N8-5FD.text" = "Автор";
+
+/* Class = "UILabel"; text = "Название"; ObjectID = "57e-vl-6zL"; */
+"57e-vl-6zL.text" = "Название";
+
+/* Class = "UILabel"; text = "Author"; ObjectID = "DOA-fX-GAc"; */
+"DOA-fX-GAc.text" = "Author";
+
+/* Class = "UITextField"; placeholder = "Введите стоимость"; ObjectID = "JI4-e6-fuK"; */
+"JI4-e6-fuK.placeholder" = "Введите стоимость";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "Rlo-Nd-Xzf"; */
+"Rlo-Nd-Xzf.text" = "Price";
+
+/* Class = "UILabel"; text = "Стоимость"; ObjectID = "WTo-sI-1MY"; */
+"WTo-sI-1MY.text" = "Стоимость";
+
+/* Class = "UINavigationItem"; title = "Книги"; ObjectID = "Wrz-Uc-DRU"; */
+"Wrz-Uc-DRU.title" = "Книги";
+
+/* Class = "UINavigationItem"; title = "Продать книгу"; ObjectID = "Y18-6T-qck"; */
+"Y18-6T-qck.title" = "Продать книгу";
+
+/* Class = "UITextField"; placeholder = "Введите автора"; ObjectID = "cg2-5W-dO4"; */
+"cg2-5W-dO4.placeholder" = "Введите автора";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "uMz-dF-uCq"; */
+"uMz-dF-uCq.text" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Продать"; ObjectID = "yeA-hX-RC0"; */
+"yeA-hX-RC0.normalTitle" = "Продать";
+
+/* Class = "UIButton"; normalTitle = "Купить"; ObjectID = "z9a-zx-OKv"; */
+"z9a-zx-OKv.normalTitle" = "Купить";
