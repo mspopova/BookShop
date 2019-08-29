@@ -24,8 +24,8 @@ class PDFViewController: UIViewController, MFMailComposeViewControllerDelegate {
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
         composer.setToRecipients([""])
-        composer.setSubject("Sharing book from books.ru")
-        composer.setMessageBody("Hi, check out this book from books.ru:", isHTML: true)
+        composer.setSubject("Делюсь книгой из приложения books.ru")
+        composer.setMessageBody("Привет, посмотри эту книгу на books.ru:", isHTML: true)
         self.present(composer, animated: true, completion: nil)
         
         if let fileData = NSData(contentsOf: PdfManager.path){
