@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         
 ////////UNCOMMENT TO LOAD DATA FROM PLIST//////////
 
-//        DispatchQueue.main.async {
-//            self.newBook.getBooks(}
+        DispatchQueue.main.async {
+            self.newBook.getBooks()}
 
 ///////////////////////////////////////////////////
         
